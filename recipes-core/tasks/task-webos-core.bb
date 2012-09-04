@@ -4,7 +4,7 @@ DESCRIPTION = "openembedded-core and meta-oe components used in Open webOS"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7cacdbeed46a0096b10"
 
-PR = "r5"
+PR = "r6"
 
 PACKAGES = "\
     ${PN} \
@@ -37,7 +37,6 @@ RDEPENDS_${PN} = " \
      hunspell \
      icu \
      iproute2 \
-     jpeg \
      libgcrypt \
      libgpg-error \
      libpng \
