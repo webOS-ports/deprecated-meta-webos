@@ -250,7 +250,7 @@ do_install() {
 }
 
 do_clean_prepend() {
-	os.system('cd ' + bb.data.expand('${S}', d) + ' && [ -f Makefile ] && make distclean')
+    os.system('cd ' + bb.data.expand('${S}', d) + ' && [ -f Makefile ] && make distclean')
 }
 
 FILES_${PN} += "${webos_sysmgrdir} ${webos_sysconfdir} ${webos_applicationsdir} ${webos_soundsdir}"
