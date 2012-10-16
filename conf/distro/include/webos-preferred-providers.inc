@@ -6,6 +6,7 @@
 # Prefer libjpeg-turbo from meta-oe
 PREFERRED_PROVIDER_jpeg = "libjpeg-turbo"
 PREFERRED_PROVIDER_jpeg-native = "libjpeg-turbo-native"
+PREFERRED_PROVIDER_qmake-webos-native = "qt4-native"
 
 # Keith says that image does not boot when only one is included
 # TODO: find what is needed from initscripts and merge that to webos-initscripts
