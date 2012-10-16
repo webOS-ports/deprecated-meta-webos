@@ -7,6 +7,10 @@
 # Upstream components don't have submissions
 PREFERRED_VERSION_db ?= "4.8.30"
 PREFERRED_VERSION_linux-yocto ?= "3.4%"
+PREFERRED_VERSION_vboxguestdrivers ?= "4.2.6"
+
+PREFERRED_VERSION_qt4-native ?= "4.8.3"
+
 # Stick to latest udev version provided by oe-core
 PREFERRED_VERSION_udev ?= "164"
 PREFERRED_VERSION_vboxguestdrivers ?= "4.2.6"
