@@ -1,0 +1,34 @@
+From 5adafd3c652b5d1a83f495f71838356b63f28973 Mon Sep 17 00:00:00 2001
+From: Martin Jansa <Martin.Jansa@gmail.com>
+Date: Sat, 27 Oct 2012 19:21:10 +0200
+Subject: [PATCH] BrowserPage: don't send requestId in LSCall
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+* fails with int-to-pointer-cast on 64bit target and José DapenaPaz
+  says it's not used
+* Src/BrowserPage.cpp:2860:64: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+  cc1plus: all warnings being treated as errors
+
+Signed-off-by: Martin Jansa <Martin.Jansa@gmail.com>
+---
+ Src/BrowserPage.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Src/BrowserPage.cpp b/Src/BrowserPage.cpp
+index c72a78b..562a415 100644
+--- a/Src/BrowserPage.cpp
++++ b/Src/BrowserPage.cpp
+@@ -2857,7 +2857,7 @@ bool BrowserPage::smartKeySearch(int requestId, const char* query)
+         BERR("Error generating JSON");
+     } else {
+         bool succeeded = LSCall(m_lsHandle, "palm://com.palm.smartKey/search", argsStr.c_str(),
+-                                smartKeySearchCallback, (void*)requestId, NULL, &error);
++                                smartKeySearchCallback, NULL, NULL, &error);
+         if (succeeded) {
+             return true;
+         } else {
+-- 
+1.8.0.2
+
