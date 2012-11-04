@@ -70,7 +70,7 @@ install_launcher3_support() {
 	# (do them all individually)
 	if [ -f conf/launcher3/launcher_icon_layout_settings-${MACHINE}.conf ]
 	then
-		install	-v -m 644 conf/launcher3/launcher_icon_layoutsettings-${MACHINE}.conf ${D}${sysconfdir}/palm/launcher3/launcher_icon_layout_settings-platform.conf
+		install	-v -m 644 conf/launcher3/launcher_icon_layout_settings-${MACHINE}.conf ${D}${sysconfdir}/palm/launcher3/launcher_icon_layout_settings-platform.conf
 	fi
 
 	#install the default designator mapping and tab/page definition - default is in /etc/palm/launcher3/app-keywords-to-designator-map.txt
