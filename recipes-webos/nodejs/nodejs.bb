@@ -18,13 +18,15 @@ inherit webos_cmake
 inherit webos_program
 
 WEBOS_GIT_TAG = "submissions/${WEBOS_SUBMISSION}"
-SRC_URI = "${OPENWEBOS_GIT_REPO}/${PN};tag=${WEBOS_GIT_TAG};protocol=git"
+SRC_URI = "${OPENWEBOS_GIT_REPO}/${BPN};tag=${WEBOS_GIT_TAG};protocol=git"
 S = "${WORKDIR}/git"
+
+BBCLASSEXTEND = "native"
 
 # Pass in the portion before the hyphen, which is expected to have 3 dot-separated fields
 NODEJS_COMPONENT_VERSION = "${@'${WEBOS_COMPONENT_VERSION}'.split('-')[0]}"
 
-EXTRA_OECMAKE += "-DNODEJS_COMPONENT_VERSION:STRING=${NODEJS_COMPONENT_VERSION} -DTARGET_CORE_OS:STRING=rockhopper"
+EXTRA_OECMAKE += "-DNODEJS_COMPONENT_VERSION:STRING=${NODEJS_COMPONENT_VERSION} -DTARGET_CORE_OS:STRING=rockhopper -DCMAKE_AR=`which ar`"
 
 OECMAKE_C_FLAGS += "-fsigned-char"
 OECMAKE_CXX_FLAGS += "-fsigned-char"
