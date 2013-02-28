@@ -1,7 +1,11 @@
 PRINC := "${@int(PRINC) + 1}"
 
 # drop ${@base_contains('DISTRO_FEATURES', 'x11', 'virtual/libx11 libxtst libice libsm libxcb gtk+', '', d)}"
+# and gconf -> polkit -> consolekit -> virtual/libx11
 DEPENDS = "libatomics-ops liboil avahi libsamplerate0 libsndfile1 libtool"
+DEPENDS += "udev alsa-lib glib-2.0 dbus \
+           ${@base_contains('DISTRO_FEATURES', 'bluetooth', 'bluez4 sbc', '', d)}"
+
 # pulseaudio_2.1 has few more DEPENDS:
 DEPENDS += "libjson gdbm speex libxml-parser-perl-native"
 
