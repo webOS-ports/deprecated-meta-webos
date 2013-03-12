@@ -8,6 +8,7 @@ SECTION = "webos/libs"
 DEPENDS = "glib-2.0"
 RDEPENDS_${PN} = "nyx-modules"
 
+PV = "5.0.0-64"
 PR = "r5"
 
 inherit webos_component

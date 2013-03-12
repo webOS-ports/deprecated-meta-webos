@@ -9,6 +9,7 @@ inherit webos_autotools
 inherit webos_enhanced_submissions
 inherit webos_library
 
+PV = "1.8.0-35"
 PR = "r2"
 
 WEBOS_GIT_TAG = "submissions/${WEBOS_SUBMISSION}"
