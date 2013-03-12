@@ -12,6 +12,8 @@ VBOX_RDEPENDS = ""
 VBOX_RDEPENDS_qemux86 = "vboxguestdrivers"
 RDEPENDS_${PN} = "lsb ${VBOX_RDEPENDS}"
 
+# corresponds to tag submissions/83
+SRCREV = "0b01924fd6a5c6ac9f2394c055580d49cc6afa56"
 PV = "5.0.0-83"
 PR = "r7"
 

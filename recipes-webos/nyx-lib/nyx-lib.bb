@@ -8,6 +8,8 @@ SECTION = "webos/libs"
 DEPENDS = "glib-2.0"
 RDEPENDS_${PN} = "nyx-modules"
 
+# corresponds to tag submissions/64
+SRCREV = "989fc4a02871e8b1ff1d2a7b88469ccd3d29edc2"
 PV = "5.0.0-64"
 PR = "r5"
 

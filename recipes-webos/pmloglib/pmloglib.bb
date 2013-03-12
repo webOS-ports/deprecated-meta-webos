@@ -7,6 +7,8 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/Apache-2.0;md5=89aea4e17d99a7ca
 
 RDEPENDS_${PN} = "pmlogconf"
 
+# corresponds to tag submissions/24
+SRCREV = "358f71d03be4193815e9d57504b541f16fca0ef4"
 PV = "2.1.0-24"
 PR = "r3"
 

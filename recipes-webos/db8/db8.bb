@@ -10,6 +10,8 @@ PROVIDES = "mojodb"
 
 DEPENDS = "db luna-service2 luna-prefs jemalloc icu pmloglib curl glib-2.0"
 
+# corresponds to tag submissions/62
+SRCREV = "2bf2b4fb31dd875add28bcc5c12d6beed4016f52"
 PV = "2.0.0-62"
 PR = "r8"
 
