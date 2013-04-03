@@ -2,7 +2,7 @@
 # (c) Copyright 2013 LG Electronics
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
-PR_append = "webos2"
+PRINC := "${@int(PRINC) + 2}"
 
 CERT_SOURCE_DIR = "${datadir}/ca-certificates"
 CERT_TARGET_DIR = "${sysconfdir}/ssl/certs"

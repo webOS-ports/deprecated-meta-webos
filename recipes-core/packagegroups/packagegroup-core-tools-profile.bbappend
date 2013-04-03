@@ -1,6 +1,6 @@
 # (c) Copyright 2013 LG Electronics
 
-PR_append = "webos1"
+PRINC := "${@int(PRINC) + 1}"
 
 # Remove sysprof, because it depends on 
 # 'libglade', 'gconf', 'polkit', 'consolekit', 'virtual/libx11

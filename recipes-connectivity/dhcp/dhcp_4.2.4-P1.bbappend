@@ -1,6 +1,6 @@
 # (c) Copyright 2012  Hewlett-Packard Development Company, L.P. 
 
-PR_append = "webos2"
+PRINC := "${@int(PRINC) + 2}"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 

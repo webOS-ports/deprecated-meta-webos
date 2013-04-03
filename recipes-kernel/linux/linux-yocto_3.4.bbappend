@@ -1,6 +1,6 @@
 # (c) Copyright 2013 LG Electronics
 
-PR_append = "webos1"
+PRINC := "${@int(PRINC) + 1}"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
