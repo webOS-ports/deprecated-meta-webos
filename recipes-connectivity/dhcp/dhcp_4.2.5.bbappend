@@ -1,6 +1,7 @@
 # (c) Copyright 2012  Hewlett-Packard Development Company, L.P. 
+# (c) Copyright 2013 LG Electronics
 
-PRINC := "${@int(PRINC) + 2}"
+PRINC := "${@int(PRINC) + 3}"
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
@@ -11,9 +12,9 @@ SRC_URI += "file://no_bash_required-webos.patch \
 # (script should be configured to only run dhclient when needed)
 
 do_install_append () {
-        install -d ${D}${sysconfdir}/event.d
-        install -m 0644 ${WORKDIR}/dhclient.upstart ${D}${sysconfdir}/event.d/dhclient
+        install -d ${D}${webos_upstartconfdir}
+        install -m 0644 ${WORKDIR}/dhclient.upstart ${D}${webos_upstartconfdir}/dhclient
 }
 
-FILES_dhcp-client += "${sysconfdir}/event.d/dhclient"
+FILES_dhcp-client += "${webos_upstartconfdir}/dhclient"
 
