@@ -13,3 +13,5 @@ VIRTUAL-RUNTIME_initscripts = "initscripts webos-initscripts"
 
 # Other alternatives are sysvinit, systemd
 VIRTUAL-RUNTIME_init_manager = "upstart"
+
+PREFERRED_PROVIDER_udev ?= "${@base_contains('DISTRO_FEATURES','systemd','systemd','udev',d)}"
